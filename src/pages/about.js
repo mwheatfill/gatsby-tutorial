@@ -3,16 +3,17 @@ import Layout from '../components/Layout';
 import { StaticImage } from 'gatsby-plugin-image';
 import { Link, graphql } from 'gatsby';
 import RecipesList from '../components/RecipesList';
+import SEO from '../components/SEO'
 
 const AboutPage = ({
   data: {
     allContentfulRecipe: { nodes: recipes },
   },
 }) => {
-  console.log(recipes);
 
   return (
     <Layout>
+      <SEO title="About" />
       <main className="page">
         <section className="about-page">
           <article>
@@ -20,8 +21,6 @@ const AboutPage = ({
             <p>
               Vinyl iceland church-key palo santo cloud bread beard. Fam pabst
               sustainable, pickled live-edge mumblecore yr single-origin coffee.
-              Artisan meh banh mi slow-carb, fixie bespoke activated charcoal
-              kitsch bushwick ugh master cleanse.
             </p>
             <p>
               Slow-carb farm-to-table kale chips pok pok knausgaard seitan
